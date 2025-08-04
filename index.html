@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova SmartPass - Future of Biometric Attendance</title>
+  <title>Nova Smart Pass - Future of Biometric Attendance</title>
   <style>
     * {
       margin: 0;
@@ -31,8 +31,11 @@
       position: absolute;
       top: 0;
       width: 100%;
-      padding: 30px 5%;
+      padding: 20px 5%;
       z-index: 100;
+      border-radius: 10px 10px 0 0;
+      background: rgba(0, 0, 0, 0);
+      backdrop-filter: blur(10px);
     }
 
     .nav-container {
@@ -95,11 +98,11 @@
     }
 
     .hero .tagline {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-size: clamp(1.8rem, 2.5vw, 1.4rem);
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 40px;
-      font-weight: 400;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
     }
 
     .cta-buttons {
@@ -196,43 +199,37 @@
     }
 
     .feature-card:nth-child(1) .feature-image {
-      background-image: linear-gradient(135deg, rgba(0, 212, 255, 0.8), rgba(0, 153, 204, 0.8)),
-        url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+      background-image: url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
     }
 
     .feature-card:nth-child(2) .feature-image {
-      background-image: linear-gradient(135deg, rgba(0, 212, 255, 0.8), rgba(0, 153, 204, 0.8)),
-        url('https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+      background-image: url('https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
     }
 
     .feature-card:nth-child(3) .feature-image {
-      background-image: linear-gradient(135deg, rgba(0, 212, 255, 0.8), rgba(0, 153, 204, 0.8)),
-        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+      background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
     }
 
     .feature-card:nth-child(4) .feature-image {
-      background-image: linear-gradient(135deg, rgba(0, 212, 255, 0.8), rgba(0, 153, 204, 0.8)),
-        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+      background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
     }
 
     .feature-card:nth-child(5) .feature-image {
-      background-image: linear-gradient(135deg, rgba(0, 212, 255, 0.8), rgba(0, 153, 204, 0.8)),
-        url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+      background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
     }
 
     .feature-card:nth-child(6) .feature-image {
-      background-image: linear-gradient(135deg, rgba(0, 212, 255, 0.8), rgba(0, 153, 204, 0.8)),
-        url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+      background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
     }
 
     .feature-content {
-      padding: 25px;
+      padding: 8px 16px;
     }
 
     .feature-card h3 {
       font-size: 20px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       color: #1a1a1a;
     }
 
@@ -277,12 +274,12 @@
       background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover;
     }
 
-    .about-image::before {
+    /* .about-image::before {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 153, 204, 0.3));
-    }
+    } */
 
     /* Footer */
     footer {
@@ -346,6 +343,30 @@
     /* Mobile Responsive */
     @media (max-width: 768px) {
 
+      /* .hero {
+        height: 60vh;
+      } */
+
+      .hero .tagline {
+        font-size: clamp(1.2rem, 1.5vw, 1.2rem);
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+        max-width: 70vw;
+        font-weight: 600;
+        /* text-align: left; */
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+      }
+
+      /* .hero-content {
+        max-width: 700px;
+        padding: 0 20px;
+        animation: fadeInUp 1s ease-out;
+      } */
+
+      .about {
+        padding: 20px 5%;
+      }
+
       .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -354,6 +375,7 @@
       .cta-buttons {
         flex-direction: column;
         align-items: center;
+        margin-top: 0;
       }
 
       .cta-primary,
@@ -362,12 +384,18 @@
         max-width: 280px;
       }
 
+      .section-title {
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        margin-bottom: 30px;
+      }
+
       .features-grid {
         grid-template-columns: 1fr;
+        margin-top: 30px;
       }
 
       .nav-overlay {
-        padding: 20px 5%;
+        padding: 12px 5%;
       }
 
       .nav-button {
@@ -376,7 +404,24 @@
       }
 
       .logo {
-        font-size: 18px;
+        font-size: 24px;
+      }
+
+      .hero-title {
+        margin-bottom: 0px !important;
+      }
+
+      .features {
+        padding: 20px 5%;
+        /* margin-top: -60px; */
+      }
+
+      footer {
+        padding: 30px 5%;
+      }
+
+      .about-image {
+        height: 200px;
       }
     }
   </style>
@@ -387,12 +432,12 @@
   <section class="hero prevent-select">
     <div class="nav-overlay">
       <div class="nav-container">
-        <div class="logo">Nova SmartPass</div>
+        <div class="logo">Nova Smart Pass</div>
         <button class="nav-button">Get Early Access</button>
       </div>
     </div>
     <div class="hero-content">
-      <h1>Nova SmartPass</h1>
+      <h1 class="hero-title">Nova Smart Pass</h1>
       <p class="tagline">Sleek, secure biometric attendance with an aesthetic edge — unlock the future of access control
         with the power of your device.</p>
       <div class="cta-buttons">
@@ -405,7 +450,7 @@
   <!-- Features Section -->
   <section class="features" id="features">
     <div class="container">
-      <h2 class="section-title animate-on-scroll">Revolutionizing Event Authentication</h2>
+      <h2 class="section-title animate-on-scroll">Revolutionizing Event Management</h2>
 
       <div class="features-grid">
         <div class="feature-card animate-on-scroll">
@@ -471,11 +516,11 @@
       <div class="about-content">
         <div class="about-text animate-on-scroll">
           <h2>The Future of Event Management</h2>
-          <p>Nova SmartPass transforms how organizations manage attendance and identity verification. Built for event
+          <p>Nova Smart Pass transforms how organizations manage attendance and identity verification. Built for event
             organizers, companies, and social clubs who demand efficiency without compromising security.</p>
           <p>Our self-authentication system eliminates manual processes, reduces wait times, and provides comprehensive
             analytics — all while maintaining the highest standards of user privacy and data protection.</p>
-          <p>Join thousands of organizers who've already upgraded their events with Nova SmartPass.</p>
+          <p>Join hundereds of organizers who've already upgraded their events with Nova Smart Pass.</p>
         </div>
         <div class="about-image animate-on-scroll"></div>
       </div>
@@ -485,10 +530,10 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <div class="footer-logo">Nova SmartPass</div>
+      <div class="footer-logo">Nova Smart Pass</div>
       <p class="footer-text">Revolutionizing attendance tracking and identity verification for the modern world.</p>
       <div class="footer-bottom">
-        <p>&copy; 2025 Nova SmartPass. All rights reserved. | Built for the future of event management.</p>
+        <p>&copy; 2025 Nova Smart Pass. All rights reserved. | Built for the future of event management.</p>
       </div>
     </div>
   </footer>
@@ -530,7 +575,7 @@
     document.querySelectorAll('.nav-button, .cta-primary').forEach(button => {
       button.addEventListener('click', (e) => {
         e.preventDefault();
-        alert('🚀 Thanks for your interest! Nova SmartPass is launching soon. We\'ll notify you when it\'s ready!');
+        alert('🚀 Thanks for your interest! Nova Smart Pass is launching soon. We\'ll notify you when it\'s ready!');
       });
     });
   </script>
