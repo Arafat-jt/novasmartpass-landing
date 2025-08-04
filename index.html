@@ -26,6 +26,31 @@
       overflow-x: hidden;
     }
 
+    #toast {
+      position: fixed;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #00d4ff, #0099cc);
+      color: white;
+      padding: 18px 32px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 8px 10px rgb(0, 0, 0, 0.6);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+      text-align: center;
+    }
+
+    #toast.show {
+      display: block;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
     /* Navigation - Integrated with Hero */
     .nav-overlay {
       position: absolute;
@@ -343,6 +368,12 @@
     /* Mobile Responsive */
     @media (max-width: 768px) {
 
+      #toast {
+        left: 20%;
+        transform: translateX(-13%);
+
+      }
+
       /* .hero {
         height: 60vh;
       } */
@@ -441,7 +472,7 @@
       <p class="tagline">Sleek, secure biometric attendance with an aesthetic edge — unlock the future of access control
         with the power of your device.</p>
       <div class="cta-buttons">
-        <a href="#" class="cta-primary">Download App</a>
+        <a class="cta-primary">Download App</a>
         <a href="#features" class="cta-secondary">Learn More</a>
       </div>
     </div>
@@ -538,6 +569,10 @@
     </div>
   </footer>
 
+  <div id="toast">
+    🚀 Thanks for your interest! Nova Smart Pass is launching soon.<br>We'll notify you when it's ready!
+  </div>
+
   <script>
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -575,9 +610,17 @@
     document.querySelectorAll('.nav-button, .cta-primary').forEach(button => {
       button.addEventListener('click', (e) => {
         e.preventDefault();
-        alert('🚀 Thanks for your interest! Nova Smart Pass is launching soon. We\'ll notify you when it\'s ready!');
+        showToast();
       });
     });
+
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
   </script>
 </body>
 
